@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('cipari.jpg');
+            font-family: Arial, sans-serif;
+        }
+        form {
+            font-size: 20px;
+            background-color: rgb(220, 220, 0);
+            padding: 20px;
+            display: inline-block;
+        }
+        input[type="text"] {
+            width: 100px;
+        }
+        input[type="button"] {
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function calculateMB() {
+            const gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mb').value = (gb * 1024).toFixed(2);
+        }
+        
+        function calculateMiB() {
+            const gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mib').value = (gb * 953.674).toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    
+    <form>
+        <p>GB: <input type="text" id="gb"> → <input type="text" id="mb"> MB</p>
+        <p>Izteikt megabaitos: <input type="button" value="Aprēķināt" onclick="calculateMB()"></p>
+        
+        <p>GB: <input type="text" id="gb2"> → <input type="text" id="mib"> MiB</p>
+        <p>Izteikt mēbibaitos: <input type="button" value="Aprēķināt" onclick="calculateMiB()"></p>
+    </form>
+</body>
+</html>

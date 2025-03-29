@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/stils.css">
+    <script src="js/script.js"></script>
+    
+    <style>
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            margin: 20px 0;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }    
+    </style>        
+</head>
+<body>
+    <div class="nav-bar">
+    <a href="#sakums">Sākums</a>
+            <a href="#gimp">GIMP</a>
+            <a href="#inkscape">Inkscape</a>
+            <a href="#tinkercad">TinkerCAD</a>
+            <a href="#clipchamp">Clipchamp</a>
+            <a href="#word">Word</a>
+            <a href="#excel">Excel</a>
+        </div>
+    <div id="sakums" class="hero-section">
+        <div class="container">
+            <h1>Aleksejs Skitskis</h1>
+            <p>Mans portfolio</p>
+        </div>
+    </div>
+
+    <div id="manidarbi" class="content-section">
+        <div class="container">
+            <h2>Mani darbi</h2>
+            <div class="work-item full-width" id="gimp">
+                <h3>GIMP</h3>
+                <p>GIF veidošana ar rastrgrafikas rīku GIMP</p>
+                <button onclick="document.getElementById('modal1').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+            <div class="work-item full-width" id="inkscape">
+                <h3>Inkscape</h3>
+                <p>Logo veidošana ar vektorgrafikas rīku Inkscape</p>
+                <button onclick="document.getElementById('modal2').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+            <div class="work-item full-width" id="tinkercad">
+                <h3>TinkerCAD</h3>
+                <p>3D Modeļa Veidošana ar TinkerCAD un to Printēšana</p>
+                <button onclick="document.getElementById('modal3').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+            <div class="work-item full-width" id="clipchamp">
+                <h3>Clipchamp</h3>
+                <p>Video izveide ar Clipchamp video redaktora palīdzību</p>
+                <button onclick="document.getElementById('modal4').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+            <div class="work-item full-width" id="word">
+                <h3>Word</h3>
+                <p>Teksta apstrāde ar Microsoft Word</p>
+                <button onclick="document.getElementById('modal5').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+            <div class="work-item full-width" id="excel">
+                <h3>Excel</h3>
+                <p>Darbs ar Microsoft Excel</p>
+                <button onclick="document.getElementById('modal6').style.display='block'" class="btn">Skatīt vairāk</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Windows -->
+    <div id="modal1" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal1').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>GIMP</h2>
+                <img src="images/gimp.gif">
+                <p>Protu strādāt ar GIMP – apstrādāt attēlus, mainīt krāsas un kontrastu, izgriezt objektus, izmantot slāņus un efektus. Veidoju vienkāršus dizainus, plakātus un attēlu korekcijas.</p>
+            </div>
+        </div>
+
+    <div id="modal2" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal2').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>Inkscape</h2>
+                <img src="images/inkscape.webp">
+                <p>Protu strādāt ar Inkscape – veidoju vektorgrafikas ilustrācijas, logo, ikonas un vienkāršus dizainus. Protu izmantot līknes, slāņus un efektus, kā arī pielāgot formas un krāsas.</p>
+            </div>
+        </div>
+
+    <div id="modal3" class="w3-modal">
+       <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal3').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>TinkerCAD</h2>
+                <img src="images/tinkercad.jpg">
+                <p>Protu strādāt ar TinkerCAD – veidoju 3D modeļus, konstruēju vienkāršas detaļas un projektus. Izmantoju dažādas formas, pielāgoju izmērus un apvienoju objektus, lai radītu funkcionālus dizainus.</p>
+            </div>
+        </div>
+
+    <div id="modal4" class="w3-modal">
+       <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal4').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>Clipchamp</h2>
+                <video src="images/clipchamp.mp4" controls></video>
+                <p>Protu strādāt ar Clipchamp – montēju video, pievienoju efektus, tekstu un mūziku. Apgriežu, savienoju un pielāgoju klipus, lai izveidotu vienkāršus, vizuāli pievilcīgus video.</p>
+            </div>
+        </div>
+
+    <div id="modal5" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal5').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>Word</h2>
+                <img src="images/word.png">
+                <p>Protu strādāt ar Microsoft Word – veidoju un formatēju dokumentus, izmantoju tabulas, grafikus un dažādus stilu un fontus. Esmu prasmīgs darbā ar dokumentu struktūru, pielāgoju izkārtojumu un izmantoju atsauces un numurēšanu.</p>
+            </div>
+        </div>
+
+    <div id="modal6" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <span onclick="document.getElementById('modal6').style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>Excel</h2>
+                <img src="images/excel.png">
+                <p>Protu strādāt ar Microsoft Excel – veidoju un formatēju tabulas, izmantoju formulas un funkcijas, kā arī analizēju datus. Esmu prasmīgs darbā ar grafikiem, datu filtrēšanu un kārtotājām funkcijām, lai viegli organizētu un apstrādātu informāciju.</p>
+            </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzimšanas dienas kalkulators</title>
+    <script>
+        function dienas() {
+            const gads = parseInt(document.getElementById('gads').value);
+            const menesis = parseInt(document.getElementById('menesis').value);
+            const diena = parseInt(document.getElementById('datums').value);
+            
+            if (isNaN(gads) || isNaN(menesis) || isNaN(diena)) {
+                alert("Lūdzu, ievadi derīgus skaitļus datumam!");
+                return;
+            }
+
+            const sodien = new Date();
+            const sodienGads = sodien.getFullYear();
+            
+            let dzimsanasDatums = new Date(sodienGads, menesis-1, diena);
+            
+            if (dzimsanasDatums < sodien) {
+                dzimsanasDatums.setFullYear(sodienGads + 1);
+            }
+            
+            const atlikusasDienas = Math.ceil((dzimsanasDatums - sodien) / (1000 * 60 * 60 * 24));
+            document.getElementById('result').value = atlikusasDienas;
+        }
+    </script>
+</head>
+<body>
+    <h1>Gaidot dzimšanas dienu...</h1>
+    <hr>
+    
+    <form>
+        <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>       
+        <label>gads: <input type="text" id="gads"></label><br>
+        <label>mēnesis: <input type="text" id="menesis"></label><br>
+        <label>diena: <input type="text" id="datums"></label><br>
+        
+        <input type="button" value="Aprēķināt dienu skaitu līdz dzimšanas dienai!" onclick="dienas()"><br><br>
+        
+        <label>Līdz svētkiem atlikušas: <input type="text" id="result" readonly> dienas :))</label>
+    </form>
+</body>
+</html>
