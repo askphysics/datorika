@@ -25,12 +25,16 @@
     <script>
         function calculateMB() {
             const gb = parseFloat(document.getElementById('gb').value);
-            document.getElementById('mb').value = (gb * 1024).toFixed(2);
+            if (!isNaN(gb)) {
+                document.getElementById('mb').value = (gb * 1024).toFixed(2);
+            }
         }
         
         function calculateMiB() {
-            const gb = parseFloat(document.getElementById('gb').value);
-            document.getElementById('mib').value = (gb * 953.674).toFixed(2);
+            const gb2 = parseFloat(document.getElementById('gb2').value);
+            if (!isNaN(gb2)) {
+                document.getElementById('mib').value = (gb2 * 953.674).toFixed(2);
+            }
         }
     </script>
 </head>
